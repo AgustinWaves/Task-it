@@ -6,24 +6,24 @@ import AddTask from './components/AddTask'
 function App() {
   const [showAddTask, setShowAddTask] = useState(false)
   const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      text: 'Doc Appointment',
-      day: 'Feb 5th at 14:30',
-      reminder: true,
-    },
-    {
-      id: 2,
-      text: 'Theos birthday',
-      day: 'May 6th at 19:30',
-      reminder: true,
-    },
-    {
-      id: 3,
-      text: 'Meeting with team',
-      day: 'Feb 8th at 11:30',
-      reminder: true,
-    }
+    // {
+    //   id: 1,
+    //   text: 'Doc Appointment',
+    //   day: 'Feb 5th at 14:30',
+    //   reminder: true,
+    // },
+    // {
+    //   id: 2,
+    //   text: 'Theos birthday',
+    //   day: 'May 6th at 19:30',
+    //   reminder: true,
+    // },
+    // {
+    //   id: 3,
+    //   text: 'Meeting with team',
+    //   day: 'Feb 8th at 11:30',
+    //   reminder: true,
+    // }
 ])
 
 // Add Task
@@ -49,7 +49,7 @@ const toggleReminder = (id) => {
     <div className="container">
       <Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
       {showAddTask && <AddTask onAdd={addTask}/>}
-      {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>) : ('No tasks right now, want to add one?')}
+      {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>) : ('No tasks right now. Do you want to add one?')}
     </div>
   );
 }
